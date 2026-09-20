@@ -1,0 +1,42 @@
+#import "../template.typ": *
+#show: styled
+
+== 位运算
+
+=== 子集枚举
+
+#source("misc/bit/枚举子集.cpp")
+
+=== 子集和 DP
+
+=== 手写 bitset
+
+特别适用于动态长度的情况。
+
+#source("misc/bit/bitset.hpp", namespace: "my_bitset")
+
+== 随机化
+
+=== 模拟退火
+
+#source("misc/模拟退火.cpp", namespace: "SimulateAnneal")
+
+== 线性递推（BM 算法）
+
+#desc 给定 ${a_i}_(i=1)^n$，求最短递推数列使得 $a_n = sum_(i=1)^k f_(n-i) c_i (n > k)$。模 $998244353$。$O(n^2)$。
+
+#source("misc/线性递推.cpp", namespace: "BerlekampMassey")
+
+== 高精度
+
+== 整式递推
+
+== A$*$ 搜索
+
+== 霍夫曼编码
+
+== 分数规划
+
+== 浮点数求和
+
+#source("misc/浮点数求和.cpp")
