@@ -1,22 +1,24 @@
 #import "template.typ": *
 
 #show: project.with(
-  title: "Plenty of Penalty's Standard Library",
+  title: "Brightest Flame+'s Standard Library",
   authors: (
-    "xyrjr233",
-    "add10k",
-    "memset0",
+    "cmk666",
+    "xryjr233",
+    "ladicius",
   ),
   special_thanks: [
     Qingyu,
     Sulfox,
     fstqwq,
     Antileaf,
+    memset0,
+    add10k,
     and seniors from _Zhejiang University_.
   ],
   comment: [
     #v(0.5em)
-    2024/10/26-27 CCPC Jinan Site
+    Update on 2026/6/21
   ],
 )
 
