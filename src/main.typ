@@ -26,7 +26,7 @@
 #include "basic/main.typ"
 
 = 数据结构
-#include "datastrure/main.typ"
+#include "ds/main.typ"
 
 = 树
 #include "tree/main.typ"
