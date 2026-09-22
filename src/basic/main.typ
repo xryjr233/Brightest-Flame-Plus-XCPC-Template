@@ -8,9 +8,6 @@
 #[
   #set heading(outlined: false)
 
-  === 随机数
-  #source("basic/random.hpp")
-
   === 手动开编译选项
   #source("basic/编译选项.hpp")
 
