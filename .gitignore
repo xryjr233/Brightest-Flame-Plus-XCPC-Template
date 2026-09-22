@@ -3,3 +3,4 @@
 *.in
 *.out
 *.code.typ
+/template_test

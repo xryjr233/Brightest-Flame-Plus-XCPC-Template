@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
-#define all(x) begin(x), end(x)
-#ifdef popteam
+#ifdef bfp
 #define log(...) fprintf(stderr, __VA_ARGS__)
 #else
 #define log(...) void(0)
@@ -10,13 +9,11 @@ using namespace std;
 using ll = long long;
 using lf = long double;
 using ull = unsigned long long;
-
-const int N = 1e5 + 9;
-int n, a[N];
-
+const int N = ;
 int main() {
   cin.tie(0)->sync_with_stdio(0);
-
-  cin >> n;
-  for (int i = 1; i <= n; i++) cin >> a[i];
+  #ifdef bfp
+  freopen(".in","r",stdin);
+  #endif
+  return 0;
 }

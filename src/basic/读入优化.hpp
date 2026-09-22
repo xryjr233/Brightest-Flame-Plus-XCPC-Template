@@ -1,5 +1,5 @@
 const int SZ = 1 << 16;
-int getc() {
+char getc() {
   static char buf[SZ], *ptr = buf, *top = buf;
   if (ptr == top) {
     ptr = buf, top = buf + fread(buf, 1, SZ, stdin);

@@ -103,7 +103,7 @@
       // set text(10pt, baseline: 8pt, spacing: 3pt)
       grid(
         columns: (1fr, 1fr),
-        align(left, text("Plenty of Penalty / 十发罚时", size: 0.8em)),
+        align(left, text("Brightest Flame+ / 至亮之焰+", size: 0.8em)),
         align(right, text(counter(page).display("1/1", both: true), size: 0.9em)),
       )
     }
