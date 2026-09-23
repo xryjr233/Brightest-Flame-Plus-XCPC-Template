@@ -22,6 +22,10 @@ $
 
 === 离散对数
 
+$O(P^(3/4))-O(log P)$
+
+#source("math/number-theory/dlog.cpp")
+
 === 连分数
 
 === 数论分块

@@ -17,3 +17,6 @@
 
 === 费用流（add10k）
 #source("graph/flow/费用流@wh.cpp")
+
+=== 原始对偶费用流
+#source("graph/flow/primal_dual.cpp")
