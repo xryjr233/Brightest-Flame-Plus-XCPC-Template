@@ -76,9 +76,7 @@
 
 === 边双连通-连通 变换
 
-$t r a n s(f,c,g r a p h)$ 表示每一条割边使代价额外 $times c$ 的变换，$g r a p h$ 是以 0-index 状压形式存储的图。逆变换令 $c<- -c$ 即可。
-
-例如 $f_S$ 为 $S$ 的边双连通子图数，$g_S$ 为 $S$ 的连通子图数，则 $g=t r a n s(f,1,g r a p h),f=t r a n s(g,-1,g r a p h)$。
+定义 $g=t r a n s(f,c,g r a p h)$，其中 $g r a p h$ 为 0-index 状压形式存储的图。对于集合 $S$，定义其划分为 $S_(1~k)$ 的权值为 $c^(k-1)product_(i=1)^k f_(S_i)$ 再乘上用 $k-1$ 条边将它们连通的方案数，即每选择一条边合并两个连通块带来 $c$ 的贡献，返回的 $g_S$ 即为 $S$ 所有划分的权值和。$O(2^n n^3)$
 
 #source("math/setpoly/trans.cpp")
 
