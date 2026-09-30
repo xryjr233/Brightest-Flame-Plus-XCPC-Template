@@ -1,10 +1,7 @@
 #import "../template.typ": *
 #show: styled
 
-==== 欧拉定理
-若 $gcd(a, m) = 1$，则 $a^(phi(m)) equiv 1 (mod m)$。
-
-==== 拓展欧拉定理
+=== 拓展欧拉定理
 $
   a^b = cases(
       a^(b mod phi(m))\, &gcd(a, m) = 1\,,
@@ -14,9 +11,16 @@ $
   space (mod m)
 $
 
-=== 中国剩余定理
+=== 扩展欧几里得
+得到的解满足 $-b<x<b,-a<y<=a$。
+
+#source("math/number-theory/exgcd.cpp");
+
+=== 扩展中国剩余定理
+#source("math/number-theory/excrt.cpp");
 
 === 二次剩余
+#source("math/number-theory/二次剩余.cpp")
 
 === 原根
 
@@ -31,9 +35,10 @@ $
 
 #source("math/number-theory/数论分块.cpp")
 
-=== $n$ 维数论分块
-
 === 类欧几里得
+$sum_(i=0)^n floor((a i+b)/c)$
+
+#source("math/number-theory/类欧几里得.cpp")
 
 === 万能欧几里得
 #source("math/number-theory/万能欧几里得.cpp")

@@ -59,6 +59,3 @@
 == 杂项
 
 === 杨氏矩阵
-
-=== 二次剩余
-#source("math/cipolla.cpp")
