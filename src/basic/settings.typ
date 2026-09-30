@@ -6,6 +6,8 @@
 
 - 检查越界和 UB：`-g -fsanitize=address,undefined`
 
+- 检查 STL 相关问题（`vector` 越界、`lower_bound` 的区域不有序等）：`-D_GLIBCXX_DEBUG`（注意可能会使代码时间复杂度退化）
+
 === Code Runner 设置
 
 - 打开 `run in terminal`。

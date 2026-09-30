@@ -4,7 +4,7 @@
 == 简单数据结构
 
 === 可删堆
-#source("datastrure/简单数据结构/可删堆.cpp")
+#source("ds/简单数据结构/可删堆.cpp")
 
 === 哈希表
 
@@ -13,7 +13,7 @@
 === 线段树上二分
 #desc 线段树的每个位置上存一个每次查询区间 $[l,r]$ 的连续前缀/后缀有多少个数 $<= x$。（注意如果查询 $>=$ 则应记录 `min`。）
 
-#source("datastrure/线段树/线段树上二分.cpp")
+#source("ds/线段树/线段树上二分.cpp")
 
 === 标记永久化
 
@@ -36,10 +36,10 @@
 == 树套树
 
 == K-D Tree
-#source("datastrure/动态KDT.cpp")
+#source("ds/动态KDT.cpp")
 
 == Link Cut Tree
-#source("datastrure/LCT.cpp")
+#source("ds/LCT.cpp")
 
 == 全局平衡二叉树
 
@@ -53,4 +53,8 @@
 
 == 莫队
 
-#source("datastrure/莫队.cpp")
+#source("ds/莫队.cpp")
+
+== $O(n)-O(1)$ RMQ
+
+#source("ds/ono1rmq.cpp")

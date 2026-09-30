@@ -18,7 +18,7 @@
   ],
   comment: [
     #v(0.5em)
-    Update on 2026/6/22
+    Update on 2026/9/23
   ],
 )
 
@@ -26,7 +26,7 @@
 #include "basic/main.typ"
 
 = 数据结构
-#include "datastrure/main.typ"
+#include "ds/main.typ"
 
 = 树
 #include "tree/main.typ"
