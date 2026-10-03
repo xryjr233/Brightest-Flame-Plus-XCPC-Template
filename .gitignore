@@ -4,3 +4,4 @@
 *.out
 *.code.typ
 /template_test
+/node_modules

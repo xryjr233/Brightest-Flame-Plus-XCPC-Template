@@ -1,0 +1,24 @@
+{
+  "name": "brightest-flame-plus-xcpc-template",
+  "version": "1.0.0",
+  "description": "模板来自 [Plenty of Penalty's Standard Library](https://github.com/plenty-of-penalty/acm-template.typ)。",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xryjr233/Brightest-Flame-Plus-XCPC-Template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/xryjr233/Brightest-Flame-Plus-XCPC-Template/issues"
+  },
+  "homepage": "https://github.com/xryjr233/Brightest-Flame-Plus-XCPC-Template#readme",
+  "devDependencies": {
+    "clang-format": "^1.8.0"
+  }
+}

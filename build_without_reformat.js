@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
-const { execFile } = require('child_process');
 const exec = util.promisify(require('child_process').exec);
 const { fullRender } = require('./cp-highlight.js');
 
@@ -16,59 +15,7 @@ const options = {
     header: ['set text(font:font-mono,size:8pt)'].join('\n'),
     footer: [].join('\n'),
   },
-  format: {
-    enabled: true, // disable with `--no-format`
-    // clang-format style, tuned to reproduce src/math/polynom/多项式.cpp exactly
-    style: {
-      BasedOnStyle: 'LLVM',
-      IndentWidth: 2,
-      ColumnLimit: 100,
-      AllowShortIfStatementsOnASingleLine: 'AllIfsAndElse',
-      AllowShortLoopsOnASingleLine: true,
-      AllowShortFunctionsOnASingleLine: 'All',
-      AllowShortBlocksOnASingleLine: 'Never',
-      NamespaceIndentation: 'None',
-      FixNamespaceComments: true, // render() relies on `} // namespace xxx`
-      PointerAlignment: 'Right',
-      SortIncludes: 'Never',
-      ReflowComments: false,
-      IndentPPDirectives: 'None',
-      SpacesBeforeTrailingComments: 1,
-    },
-  },
 };
-
-function getClangFormatBinary() {
-  try {
-    return require('clang-format').getNativeBinary(); // from `npm install`
-  } catch (e) {
-    return 'clang-format'; // fall back to the one in PATH
-  }
-}
-
-let warnedFormatFailure = false;
-
-function formatCode(code, sourceFile) {
-  if (!options.format.enabled) {
-    return Promise.resolve(code);
-  }
-  return new Promise((resolve) => {
-    const args = ['--style=' + JSON.stringify(options.format.style), '--assume-filename=' + sourceFile];
-    const child = execFile(getClangFormatBinary(), args, { maxBuffer: 64 << 20 }, (err, stdout) => {
-      if (err) {
-        if (!warnedFormatFailure) {
-          warnedFormatFailure = true;
-          console.warn('[format] clang-format unavailable, keep original code (run `npm install`):', err.message);
-        }
-        resolve(code);
-      } else {
-        resolve(stdout.replace(/\r/g, ''));
-      }
-    });
-    child.stdin.on('error', () => {});
-    child.stdin.end(code);
-  });
-}
 
 async function scanDir(dirPath) {
   let entries = await fs.promises.readdir(dirPath, { withFileTypes: true });
@@ -130,8 +77,7 @@ async function render(sourceFile) {
   if (!fs.existsSync(sourceFile)) {
     return;
   }
-  const original = (await fs.promises.readFile(sourceFile)).toString().replace(/\r/g, '');
-  const source = await formatCode(original, sourceFile);
+  const source = (await fs.promises.readFile(sourceFile)).toString().replace(/\r/g, '');
   const { docs, code } = parseDocHeader(source);
   let header = '';
   header += '#import "' + path.relative(path.dirname(sourceFile), path.join(__dirname, './src/template.typ')).replace(/\\/g, '/') + '": *\n';
@@ -226,10 +172,6 @@ async function watch() {
 if (require.main == module) {
   if (process.argv.includes('--detailed')) {
     options.detailed = true;
-  }
-
-  if (process.argv.includes('--no-format')) {
-    options.format.enabled = false;
   }
 
   if (process.argv.includes('--watch')) {
