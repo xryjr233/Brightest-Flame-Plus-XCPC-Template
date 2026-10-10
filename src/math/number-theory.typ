@@ -46,3 +46,25 @@ $sum_(i=0)^n floor((a i+b)/c)$
 
 === 万能欧几里得
 #source("math/number-theory/万能欧几里得.cpp")
+
+=== 杜教筛
+
+=== Powerful Number 筛
+
+=== Min_25 筛
+
+求积性函数 $f(i)$ 的前缀和，要求 $f(i)$ 在质数处的值为多个完全积性函数的和，且在质数幂处的值可求。
+
+$
+  sum_(i=1)^(n)f(i)=F_(1)(n)+1
+$
+
+$
+  F_(k)(n)=P(k,n)+sum_(k=i)^(p_(i)^2<=n)sum_(c=1)^(p_(i)^(c+1)<=n) f(p_(i)^c)F_(i+1)(floor(n/(p_(i)^c)))+f(p_(i)^(c+1))
+$
+
+$
+  P(k,n)=F_(\p\r\i\m\e)(n)-F_(\p\r\i\m\e)(p_(k-1))
+$
+
+#source("math/number-theory/min25.cpp")

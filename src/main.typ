@@ -18,7 +18,7 @@
   ],
   comment: [
     #v(0.5em)
-    Update on 2026/9/30
+    Update on 2026/10/10
   ],
 )
 
