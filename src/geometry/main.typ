@@ -42,19 +42,17 @@
 #source("geometry/2d/polygon.hpp", namespace: "HullDiameter")
 #source("geometry/2d/polygon.hpp", namespace: "InHull")
 
-=== 圆
+=== 圆（无）
 
-TBD
+== 三维计算几何（无）
 
-== 三维计算几何
+== 旋转卡壳（无）
 
-== 旋转卡壳
+== 半平面交（无）
 
-== 半平面交
-
-== 最小圆覆盖
+== 最小圆覆盖（无）
 
 == 平面最近点对
 #source("geometry/2d/misc.hpp", namespace: "ClosestPair")
 
-== 反演变换
+== 反演变换（无）

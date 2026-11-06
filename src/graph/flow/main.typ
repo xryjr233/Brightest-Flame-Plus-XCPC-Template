@@ -8,9 +8,9 @@
 
 #source("graph/flow/最大流.cpp", namespace: "maxflow")
 
-=== 最小费用最大流
+=== 最小费用最大流（无）
 
-=== 有源汇上下界最大流
+=== 有源汇上下界最大流（无）
 
 === 最大流（add10k）
 #source("graph/flow/最大流@wh.cpp")

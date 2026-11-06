@@ -13,13 +13,13 @@
 ==== Polya 定理
 #h(1fr) $display(abs(X"/"G) = 1 / abs(G) sum_(g in G) abs(B)^(c(g)))$ #h(1fr)
 
-== 线性代数
+== 线性代数（无）
 
-== 博弈论
+== 博弈论（无）
 
-== 概率论
+== 概率论（无）
 
-== 组合数学
+== 组合数学（无）
 
 == 多项式与生成函数
 #source("math/polynom/多项式.cpp", namespace: "ModulusOperations")
@@ -72,6 +72,6 @@
 
 #source("math/setpoly/trans.cpp")
 
-== 杂项
+== 杂项（无）
 
-=== 杨氏矩阵
+=== 杨氏矩阵（无）

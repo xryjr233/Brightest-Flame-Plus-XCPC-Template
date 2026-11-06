@@ -22,7 +22,7 @@ $
 === 二次剩余
 #source("math/number-theory/二次剩余.cpp")
 
-=== 原根
+=== 原根（无）
 
 === 离散对数
 
@@ -30,7 +30,7 @@ $O(P^(3/4))-O(log P)$
 
 #source("math/number-theory/dlog.cpp")
 
-=== 连分数
+=== 连分数（无）
 
 === 数论分块
 #usage 可以 $O(1)$ 计算 $sum_(i=l)^r f(i)$，则可以 $O(sqrt(n))$ 计算 $sum_(i=1)^n f(i) g(floor(n/i))$。
@@ -47,9 +47,9 @@ $sum_(i=0)^n floor((a i+b)/c)$
 === 万能欧几里得
 #source("math/number-theory/万能欧几里得.cpp")
 
-=== 杜教筛
+=== 杜教筛（无）
 
-=== Powerful Number 筛
+=== Powerful Number 筛（无）
 
 === Min_25 筛
 
