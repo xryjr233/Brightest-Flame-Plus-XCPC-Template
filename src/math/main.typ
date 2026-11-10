@@ -48,6 +48,9 @@
 === 分治 NTT（add10k）
 #source("math/polynom/多项式-wh.cpp", namespace: "DC_NTT")
 
+=== 很短的多项式
+#source("math/polynom/很短的多项式.cpp")
+
 == 集合幂级数
 #source("math/setpoly/base.cpp")
 
